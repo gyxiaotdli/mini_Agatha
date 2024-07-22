@@ -1035,12 +1035,12 @@ def set_init_params(nwalkers, nsteps, ndim, ntemps, MC_index, nplanet, startfn=N
 
 
 ############################## load RV data ############################
-target = 'HD222237'#'HD30219'##'HIP97657'#'WASP-107'#'HD259440'#'WD1202-232'#'HD29021'##'HD222237'#'HD68475'
+target = 'HD221420'#'HD30219'##'HIP97657'#'WASP-107'#'HD259440'#'WD1202-232'#'HD29021'##'HD222237'#'HD68475'
 RVonly = False
 nplanet = 1
 print('*'*15,target,'*'*15,'\n')
 
-prefix = '/home/xiaogy/exoplanet/Test_agatha/data/combined/'
+prefix = '.'
 rvdir = prefix +'{}/'.format(target) #+ '{}bin_old/'.format(target)
 #'/home/xiaogy/exoplanet/Test_agatha/data/combined/HD222237_test/*'
 RVfiles = glob.glob(rvdir+'*')
@@ -1152,8 +1152,8 @@ if os.path.exists(fn):
     out['cov_astro'] = cov_astro
     out['ihip'] = 0
     out['iref'] = 2  # 参考epoch所在索引Gaia catalogs，DR3->2第3行数据   hip-0, dr2-1, dr3-2
-    out['cats'] = ["GDR2","GDR3"]          # used Gaia catalogs, "GDR2","GDR3"
-    out['astro_index'] = np.array([1,2])  # "GDR2","GDR3" index, 1, 2
+    out['cats'] = ["GDR3"]          # used Gaia catalogs, "GDR2","GDR3"
+    out['astro_index'] = np.array([2])  # "GDR2","GDR3" index, 1, 2
 
     if 'GDR2' not in out['cats']:out['astro_gost'] = out['astro_gost'].drop(1)
     print('\nUsing Gaia:',out['cats'])
@@ -1314,12 +1314,12 @@ if True:
     def return_one(theta):
         return 1.
     # The number of walkers must be greater than ``2*dimension``
-    ntemps = 1
+    ntemps = 10
     nwalkers = max(50, 2*(ndim+1))
     nsteps = 40000
     ndim = ndim
     thin = 100     # final saved steps -> nsteps/thin
-    nthreads = 4
+    nthreads = 1
     buin = min(200, int(nsteps/thin/2))    # should < nsteps/thin
     print('MCMC pars:',new_index, 'ndim:',ndim,'buin:',buin,'\n')
     
