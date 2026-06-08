@@ -7,3 +7,7 @@ More details of our method can be found in Feng et al.2023 (https://ui.adsabs.ha
 The current version is still being optimized to improve fitting efficiency.
 
 Please contact us if you have any questions about the use of the code. (Fabo, Feng: fengfabo@gmail.com; Guang-Yao, Xiao: gyxiao_tdli@sjtu.edu.cn)
+
+Related works can be found in https://zenodo.org/records/17986248 and https://zenodo.org/records/18172547
+
+Supplements can be found in https://zenodo.org/records/20591060
