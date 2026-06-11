@@ -10,4 +10,4 @@ Please contact us if you have any questions about the use of the code. (Fabo, Fe
 
 Related works can be found in https://zenodo.org/records/17986248 and https://zenodo.org/records/18172547
 
-Supplements can be found in https://zenodo.org/records/20591060
+Supplements (full Hipparcos data) can be found in https://zenodo.org/records/20591060
